@@ -7,5 +7,6 @@ spec:
   selector:
     app: brodin-webserver
   ports:
-    - port: 80
-      targetPort: 80
+    - name: web
+      port: 80
+      targetPort: web
