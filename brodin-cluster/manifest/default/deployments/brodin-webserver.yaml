@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: brodin-webserver
+  name: brodin-webserver
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: brodin-webserver
+  template:
+    metadata:
+      labels:
+        app: brodin-webserver
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        ports:
+        - containerPort: 80

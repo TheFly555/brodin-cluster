@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: minecraft-modded
+  labels:
+    name: minecraft-modded
+    type: modded
