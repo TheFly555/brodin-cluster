@@ -39,3 +39,29 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tutorial-service-ingress
+  namespace: tutorial
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-issuer
+spec:
+  rules:
+    - host: tutorial.brodin.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: tutorial-service
+                port:
+                  number: 80
+  tls:
+    - secretName: tutorial-service-cert
+      hosts:
+        - tutorial.brodin.dev
