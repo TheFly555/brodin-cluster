@@ -8,7 +8,7 @@ spec:
   chart:
     repository: https://traefik.github.io/charts
     name: traefik
-    version: 26.0.0
+    version: "26.0.0"
   values:
     path: ../../../../traefik/values.yaml
     # additionalArguments:
