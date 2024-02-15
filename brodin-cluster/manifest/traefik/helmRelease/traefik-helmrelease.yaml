@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: traefik
+  namespace: treafik
+spec:
+  releaseName: traefik
+  chart:
+    repository: https://helm.traefik.io/traefik
+    name: traefik
+    version: 10.10.6
+  values:
+    path: values.yaml
+    # additionalArguments:
+    #   - "--api.insecure=true"
+    # service:
+    #   type: LoadBalancer
