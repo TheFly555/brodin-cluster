@@ -15,5 +15,5 @@ spec:
         name: prometheus
       interval: 5m
   releaseName: prometheus
-  # values:
-  #   path: [value file location]
+  values:
+    path: ../../../../prometheus/values.yaml
