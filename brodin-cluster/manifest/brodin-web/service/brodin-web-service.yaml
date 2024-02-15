@@ -5,7 +5,7 @@ metadata:
   name: brodin-website-service
 spec:
   selector:
-    name: brodin-website
+    app: brodin-website
   ports:
     - protocol: TCP
       port: 80
