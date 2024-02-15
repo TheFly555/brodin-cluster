@@ -6,9 +6,9 @@ metadata:
 spec:
   releaseName: traefik
   chart:
-    repository: https://helm.traefik.io/traefik
+    repository: "https://helm.traefik.io/traefik"
     name: traefik
-    version: 10.10.6
+    version: 26.0.0
   values:
     path: ../../../../traefik/values.yaml
     # additionalArguments:
