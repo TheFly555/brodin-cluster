@@ -1,0 +1,28 @@
+# apiVersion: traefik.containo.us/v1alpha1
+# kind: IngressRoute
+# metadata:
+#   name: grafana-ingress
+#   namespace: monitoring
+#   annotations: 
+#     traefik.ingress.kubernetes.io/router.entrypoints: websecure
+#     traefik.ingress.kubernetes.io/router.tls: "true"
+#     cert-manager.io/cluster-issuer: letsencrypt-issuer
+# spec:
+#   entryPoints:
+#     - websecure
+#   routes:
+#     - match: Host(`grafana.brodin.nl`)
+#       kind: Rule
+#       services:
+#         - name: grafana
+#           port: 80
+#           sticky:
+#             cookie:
+#               httpOnly: true
+#               name: grafana
+#               secure: true
+#               sameSite: none
+#   tls:
+#     - secretName: grafana-web-cert
+#       hosts:
+#         - grafana.brodin.nl  

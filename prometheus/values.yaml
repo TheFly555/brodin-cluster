@@ -33,7 +33,7 @@ alertmanager:
   fullnameOverride: alertmanager
   enabled: true
   ingress:
-    enabled: false
+    enabled: true
 
 grafana:
   enabled: true
