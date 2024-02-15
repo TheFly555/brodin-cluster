@@ -1,23 +1,23 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: brodin-website
-  annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
-    traefik.ingress.kubernetes.io/router.tls: "true"
-    cert-manager.io/cluster-issuer: letsencrypt-issuer
-spec:
-  rules:
-    - host: brodin.nl
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: brodin-website-service
-                port:
-                  number: 80
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: brodin-website
+#   annotations:
+#     traefik.ingress.kubernetes.io/router.entrypoints: websecure
+#     traefik.ingress.kubernetes.io/router.tls: "true"
+#     cert-manager.io/cluster-issuer: letsencrypt-issuer
+# spec:
+#   rules:
+#     - host: brodin.nl
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: brodin-website-service
+#                 port:
+#                   number: 80
     # - host: tutorial.brodin.nl
     #   http:
     #     paths:
@@ -28,10 +28,10 @@ spec:
     #             name: tutorial-service
     #             port:
     #               number: 80
-  tls:
-    - secretName: brodin-website-cert
-      hosts:
-        - brodin.nl
+  # tls:
+  #   - secretName: brodin-website-cert
+  #     hosts:
+  #       - brodin.nl
     # - secretName: tutorial-service-cert
     #   hosts:
     #     - tutorial.brodin.nl
