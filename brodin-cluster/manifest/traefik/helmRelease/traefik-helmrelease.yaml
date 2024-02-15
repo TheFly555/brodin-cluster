@@ -1,4 +1,4 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta2
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: traefik
@@ -7,7 +7,7 @@ spec:
   releaseName: treafik
   chart:
     repository: https://traefik.github.io/charts
-    name: traefik/traefik
+    name: traefik
     version: "26.0.0"
-  values:
-    path: ../../../../traefik/values.yaml
+  # values:
+  #   path: ../../../../traefik/values.yaml
