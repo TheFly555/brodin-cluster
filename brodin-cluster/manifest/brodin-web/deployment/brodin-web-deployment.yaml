@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: brodin-website
+  name: brodin-website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: brodin-website
+  template:
+    metadata:
+      labels:
+        app: brodin-website
+    spec:
+      containers:
+        - name: brodin-website-container
+          image: nginx
+          ports:
+            - containerPort: 80

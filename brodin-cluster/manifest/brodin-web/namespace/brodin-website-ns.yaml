@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: brodin-website
+  labels:
+    name: brodin-website
+    application-type: website
