@@ -6,8 +6,8 @@ metadata:
 spec:
   releaseName: treafik
   chart:
-    repository: https://traefik.github.io/charts
-    name: traefik
+    repository: "https://traefik.github.io/charts"
+    name: "traefik"
     version: "26.0.0"
   # values:
   #   path: ../../../../traefik/values.yaml
