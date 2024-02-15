@@ -9,8 +9,8 @@ spec:
     repository: https://helm.traefik.io/traefik
     name: traefik
     version: 10.10.6
-  values:
-    path: values.yaml
+  # values:
+  #   path: values.yaml
     # additionalArguments:
     #   - "--api.insecure=true"
     # service:
