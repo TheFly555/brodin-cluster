@@ -12,7 +12,6 @@ spec:
       app: minecraft-server
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: minecraft-server
     spec:
