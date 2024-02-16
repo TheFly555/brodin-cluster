@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: minecraft-server
+    type: server
   name: minecraft-server
   namespace: minecraft
 spec:
