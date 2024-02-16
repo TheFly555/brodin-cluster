@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: tutorial
+  name: tutorial-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: glasscraft
+      type: minecraft-server
+  template:
+    metadata:
+      labels:
+        name: glasscraft
+        type: minecraft-server
+    spec:
+      containers:
+        - name: minecraft-server-container
+          image: itzg/minecraft-server
+          ports:
+            - containerPort: 25565

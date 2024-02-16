@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: minecraft
+  name: minecraft-server-service
+spec:
+  selector:
+    name: glasscraft
+    type: minecraft-server
+  ports:
+    - port: 25565
+      targetPort: 25565
