@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: tutorial
-  name: tutorial-service
+  namespace: minecraft
+  name: minecraft-server
 spec:
   replicas: 1
   selector:
