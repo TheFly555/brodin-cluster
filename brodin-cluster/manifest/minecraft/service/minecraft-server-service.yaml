@@ -5,8 +5,7 @@ metadata:
   name: minecraft-server-service
 spec:
   selector:
-    name: glasscraft
-    type: minecraft-server
+    app: minecraft-server
   ports:
     - port: 25565
       targetPort: 25565
